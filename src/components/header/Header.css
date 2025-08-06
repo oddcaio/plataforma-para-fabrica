@@ -1,9 +1,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap');
 
-.header {
+.diva{
     display: flex;
-    flex-direction: row;
-    padding: 0px;
-    height: 7.7777777777778vh;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 137px;
+}
+h1 {
+  margin: 0;
+  width: 10vw;
+      background-color: blue;
+}
+/*NAV*/
+.pill-nav a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.pill-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.pill-nav.hidden {
+  display: none;
+}
+
+.pill-nav.visible {
+  display: block;
+}
+
+
+
+
+
+
+
+/*DROPDOWN*/
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+    background-color: aqua;
+
+}
+
+/* Dropdown botão */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* caixa onde fica o texto */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(255, 0, 0);
+}
+
+/* onde fica as opções */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* texto das opções */
+.dropdown-content a {
+width: 100vw;
+  float: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* caixa de texto das opções enquanto mouse em cima */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* segura o dropdown em hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
