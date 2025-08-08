@@ -9,6 +9,9 @@ export default function Header() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
+  export default function Home() {
+  const handleSubmit = (e) => {
+    e.preventDefault();}
 
   return (
     <header>
@@ -59,10 +62,31 @@ export default function Header() {
         </div>
       </div>
 
-      <button className='icon'><TiUserOutline className='icone'/></button>
-      <button className='icon'><RiShoppingCartLine className='icone'/></button>
+      <button className='icon'><TiUserOutline className='icone' /></button>
+      <button className='icon'><RiShoppingCartLine className='icone' /></button>
 
-    </header>
+      <div className="topnav">
+        <a className="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+        <div className="search-container">
+          <form onSubmit={handleSubmit}>
+            <input type="text" placeholder="Search.." name="search" />
+            <button type="submit" aria-label="Buscar">
+              <i className="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div style={{ paddingLeft: 16 }}>
+        <h2>Responsive Search Bar</h2>
+        <p>Navigation bar with a search box and a submit button inside of it.</p>
+        <p>Resize the browser window to see the responsive effect.</p>
+      </div>
+  );
+    </header >
   );
 }
 
